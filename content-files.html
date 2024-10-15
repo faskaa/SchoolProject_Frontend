@@ -16,8 +16,8 @@
 <!-- Google Fonts -->
 <link href="https://fonts.gstatic.com" rel="preconnect">
 <link
-  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-  rel="stylesheet">
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
 <!-- Vendor CSS Files -->
 <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="Məktəb Adı" class="img-fluid">
+        <img src="assets/img/logo.png" alt="Məktəb Adı">
         <span class="d-none d-lg-block">Məktəb Adı</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -62,6 +62,7 @@
         </li><!-- End Search Icon-->
 
         <li class="nav-item dropdown">
+
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
@@ -93,7 +94,7 @@
               <i class="bi bi-x-circle text-danger"></i>
               <div>
                 <h4>Sistem xətası</h4>
-                <p>Verilənlər bazası bağlantısında problem var</p>
+                <p>Verilənlər bazas�� bağlantısında problem var</p>
                 <p>1 saat əvvəl</p>
               </div>
             </li>
@@ -127,7 +128,7 @@
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">A. Məmmədov</span>
-          </a><!-- End Profile Image Icon -->
+          </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -188,139 +189,137 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="index.html">
-                <i class="bi bi-grid"></i>
-                <span>Dashboard</span>
-            </a>
-        </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#content-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-file-earmark-text"></i><span>Məzmun İdarəetməsi</span><i
-                    class="bi bi-chevron-down ms-auto"></i>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-target="#content-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-file-earmark-text"></i><span>Məzmun İdarəetməsi</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="content-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="content-news.html">
+              <i class="bi bi-circle"></i><span>Xəbərlər və Elanlar</span>
             </a>
-            <ul id="content-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="content-news.html">
-                        <i class="bi bi-circle"></i><span>Xəbərlər və Elanlar</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="content-pages.html" class="active">
-                        <i class="bi bi-circle"></i><span>Statik Səhifələr</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="content-gallery.html">
-                        <i class="bi bi-circle"></i><span>Qalereya</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="content-files.html">
-                        <i class="bi bi-circle"></i><span>Fayl İdarəetməsi</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Content Management Nav -->
+          </li>
+          <li>
+            <a href="content-pages.html">
+              <i class="bi bi-circle"></i><span>Statik Səhifələr</span>
+            </a>
+          </li>
+          <li>
+            <a href="content-gallery.html">
+              <i class="bi bi-circle"></i><span>Qalereya</span>
+            </a>
+          </li>
+          <li>
+            <a href="content-files.html" class="active">
+              <i class="bi bi-circle"></i><span>Fayl İdarəetməsi</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Content Management Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-book"></i><span>Tədris Proqramı</span><i class="bi bi-chevron-down ms-auto"></i>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-book"></i><span>Tədris Proqramı</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="education-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="education-programs.html">
+              <i class="bi bi-circle"></i><span>Təhsil Proqramları</span>
             </a>
-            <ul id="education-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="education-programs.html">
-                        <i class="bi bi-circle"></i><span>Təhsil Proqramları</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="education-teachers.html">
-                        <i class="bi bi-circle"></i><span>Müəllim Məlumatları</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="education-schedule.html">
-                        <i class="bi bi-circle"></i><span>Dərs Cədvəlləri</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Education Program Nav -->
+          </li>
+          <li>
+            <a href="education-teachers.html">
+              <i class="bi bi-circle"></i><span>Müəllim Məlumatları</span>
+            </a>
+          </li>
+          <li>
+            <a href="education-schedule.html">
+              <i class="bi bi-circle"></i><span>Dərs Cədvəlləri</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Education Program Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#student-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-people"></i><span>Tələbə Həyatı</span><i class="bi bi-chevron-down ms-auto"></i>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#student-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-people"></i><span>Tələbə Həyatı</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="student-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="student-activities.html">
+              <i class="bi bi-circle"></i><span>Dərsdənkənar Fəaliyyətlər</span>
             </a>
-            <ul id="student-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="student-activities.html">
-                        <i class="bi bi-circle"></i><span>Dərsdənkənar Fəaliyyətlər</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="student-clubs.html">
-                        <i class="bi bi-circle"></i><span>Tələbə Klubları</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="student-sports.html">
-                        <i class="bi bi-circle"></i><span>İdman Tədbirləri</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Student Life Nav -->
+          </li>
+          <li>
+            <a href="student-clubs.html">
+              <i class="bi bi-circle"></i><span>Tələbə Klubları</span>
+            </a>
+          </li>
+          <li>
+            <a href="student-sports.html">
+              <i class="bi bi-circle"></i><span>İdman Tədbirləri</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Student Life Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#admission-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-person-plus"></i><span>Qəbul Prosesi</span><i
-                    class="bi bi-chevron-down ms-auto"></i>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#admission-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-plus"></i><span>Qəbul Prosesi</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="admission-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="admission-form.html">
+              <i class="bi bi-circle"></i><span>Müraciət Forması</span>
             </a>
-            <ul id="admission-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="admission-form.html">
-                        <i class="bi bi-circle"></i><span>Müraciət Forması</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="admission-applications.html">
-                        <i class="bi bi-circle"></i><span>Müraciətlər</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="admission-statistics.html">
-                        <i class="bi bi-circle"></i><span>Qəbul Statistikaları</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Admission Process Nav -->
+          </li>
+          <li>
+            <a href="admission-applications.html">
+              <i class="bi bi-circle"></i><span>Müraciətlər</span>
+            </a>
+          </li>
+          <li>
+            <a href="admission-statistics.html">
+              <i class="bi bi-circle"></i><span>Qəbul Statistikaları</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Admission Process Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="contact-management.html">
-                <i class="bi bi-envelope"></i>
-                <span>Əlaqə və Sorğu İdarəetməsi</span>
-            </a>
-        </li><!-- End Contact Management Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="contact-management.html">
+          <i class="bi bi-envelope"></i>
+          <span>Əlaqə və Sorğu İdarəetməsi</span>
+        </a>
+      </li><!-- End Contact Management Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="seo-analytics.html">
-                <i class="bi bi-graph-up"></i>
-                <span>SEO və Analitika</span>
-            </a>
-        </li><!-- End SEO and Analytics Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="seo-analytics.html">
+          <i class="bi bi-graph-up"></i>
+          <span>SEO və Analitika</span>
+        </a>
+      </li><!-- End SEO and Analytics Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="system-settings.html">
-                <i class="bi bi-gear"></i>
-                <span>Sistem Parametrləri</span>
-            </a>
-        </li><!-- End System Settings Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="system-settings.html">
+          <i class="bi bi-gear"></i>
+          <span>Sistem Parametrləri</span>
+        </a>
+      </li><!-- End System Settings Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="reports-audit.html">
-                <i class="bi bi-file-earmark-text"></i>
-                <span>Hesabat və Audit</span>
-            </a>
-        </li><!-- End Reports and Audit Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="reports-audit.html">
+          <i class="bi bi-file-earmark-text"></i>
+          <span>Hesabat və Audit</span>
+        </a>
+      </li><!-- End Reports and Audit Nav -->
 
     </ul>
 
@@ -329,12 +328,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Statik Səhifələr</h1>
+      <h1>Fayl İdarəetməsi</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Ana Səhifə</a></li>
           <li class="breadcrumb-item">Məzmun İdarəetməsi</li>
-          <li class="breadcrumb-item active">Statik Səhifələr</li>
+          <li class="breadcrumb-item active">Fayl İdarəetməsi</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -345,41 +344,43 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Statik Səhifələr Siyahısı</h5>
+              <h5 class="card-title">Fayllar</h5>
               
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Səhifə Adı</th>
-                    <th scope="col">URL</th>
-                    <th scope="col">Son Yenilənmə</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Fayl Adı</th>
+                    <th scope="col">Növ</th>
+                    <th scope="col">Ölçü</th>
+                    <th scope="col">Yüklənmə Tarixi</th>
                     <th scope="col">Əməliyyatlar</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Haqqımızda</td>
-                    <td>/about-us</td>
+                    <td>Tədris Planı 2023</td>
+                    <td>PDF</td>
+                    <td>2.5 MB</td>
                     <td>2023-09-15</td>
-                    <td><span class="badge bg-success">Aktiv</span></td>
                     <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editPageModal"><i class="bi bi-pencil"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editFileModal"><i class="bi bi-pencil"></i></button>
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
+                      <a href="#" class="btn btn-info btn-sm"><i class="bi bi-download"></i></a>
                     </td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
-                    <td>Təhsil Proqramları</td>
-                    <td>/education-programs</td>
+                    <td>Məktəb Təqdimatı</td>
+                    <td>PPTX</td>
+                    <td>5.1 MB</td>
                     <td>2023-08-01</td>
-                    <td><span class="badge bg-success">Aktiv</span></td>
                     <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editPageModal"><i class="bi bi-pencil"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editFileModal"><i class="bi bi-pencil"></i></button>
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
+                      <a href="#" class="btn btn-info btn-sm"><i class="bi bi-download"></i></a>
                     </td>
                   </tr>
                 </tbody>
@@ -387,7 +388,7 @@
               <!-- End Table with stripped rows -->
 
               <div class="text-center mt-3">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPageModal"><i class="bi bi-plus-circle me-1"></i> Yeni Səhifə Əlavə Et</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addFileModal"><i class="bi bi-plus-circle me-1"></i> Yeni Fayl Əlavə Et</button>
               </div>
 
             </div>
@@ -408,74 +409,51 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Add Page Modal -->
-  <div class="modal fade" id="addPageModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
+  <!-- Add File Modal -->
+  <div class="modal fade" id="addFileModal" tabindex="-1">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Yeni Statik Səhifə Əlavə Et</h5>
+          <h5 class="modal-title">Yeni Fayl Əlavə Et</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputPageName" class="form-label">Səhifə Adı</label>
-              <input type="text" class="form-control" id="inputPageName" required>
-            </div>
-            <div class="col-md-6">
-              <label for="inputPageURL" class="form-label">URL</label>
-              <input type="text" class="form-control" id="inputPageURL" required>
+            <div class="col-12">
+              <label for="inputFileName" class="form-label">Fayl Adı</label>
+              <input type="text" class="form-control" id="inputFileName" required>
             </div>
             <div class="col-12">
-              <label for="inputPageContent" class="form-label">Məzmun</label>
-              <textarea class="form-control" id="inputPageContent" style="height: 200px" required></textarea>
-            </div>
-            <div class="col-md-6">
-              <label for="inputPageStatus" class="form-label">Status</label>
-              <select id="inputPageStatus" class="form-select" required>
-                <option selected disabled value="">Seçin...</option>
-                <option>Aktiv</option>
-                <option>Deaktiv</option>
-              </select>
+              <label for="inputFile" class="form-label">Fayl</label>
+              <input type="file" class="form-control" id="inputFile" required>
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-          <button type="button" class="btn btn-primary">Əlavə Et</button>
+          <button type="button" class="btn btn-primary">Yüklə</button>
         </div>
       </div>
     </div>
-  </div><!-- End Add Page Modal-->
+  </div><!-- End Add File Modal-->
 
-  <!-- Edit Page Modal -->
-  <div class="modal fade" id="editPageModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
+  <!-- Edit File Modal -->
+  <div class="modal fade" id="editFileModal" tabindex="-1">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Statik Səhifəni Redaktə Et</h5>
+          <h5 class="modal-title">Faylı Redaktə Et</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form class="row g-3">
-            <div class="col-md-6">
-              <label for="editPageName" class="form-label">Səhifə Adı</label>
-              <input type="text" class="form-control" id="editPageName" required>
-            </div>
-            <div class="col-md-6">
-              <label for="editPageURL" class="form-label">URL</label>
-              <input type="text" class="form-control" id="editPageURL" required>
+            <div class="col-12">
+              <label for="editFileName" class="form-label">Fayl Adı</label>
+              <input type="text" class="form-control" id="editFileName" required>
             </div>
             <div class="col-12">
-              <label for="editPageContent" class="form-label">Məzmun</label>
-              <textarea class="form-control" id="editPageContent" style="height: 200px" required></textarea>
-            </div>
-            <div class="col-md-6">
-              <label for="editPageStatus" class="form-label">Status</label>
-              <select id="editPageStatus" class="form-select" required>
-                <option>Aktiv</option>
-                <option>Deaktiv</option>
-              </select>
+              <label for="editFile" class="form-label">Yeni Fayl (əgər dəyişdirmək istəyirsinizsə)</label>
+              <input type="file" class="form-control" id="editFile">
             </div>
           </form>
         </div>
@@ -485,7 +463,7 @@
         </div>
       </div>
     </div>
-  </div><!-- End Edit Page Modal -->
+  </div><!-- End Edit File Modal -->
 
   <!-- Delete Confirmation Modal -->
   <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
@@ -496,7 +474,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Bu statik səhifəni silmək istədiyinizə əminsiniz?
+          Bu faylı silmək istədiyinizə əminsiniz?
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ləğv Et</button>
@@ -516,9 +494,6 @@
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Azerbaijani language for Simple DataTables -->
-  <script src="assets/js/simple-datatables-az.js"></script>
-
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
@@ -530,25 +505,18 @@
       });
 
       // Function to populate edit modal
-      function populateEditModal(id, name, url, content, status) {
-        document.getElementById('editPageName').value = name;
-        document.getElementById('editPageURL').value = url;
-        document.getElementById('editPageContent').value = content;
-        document.getElementById('editPageStatus').value = status;
+      function populateEditModal(id, fileName) {
+        document.getElementById('editFileName').value = fileName;
       }
 
       // Add click event listeners to edit buttons
-      const editButtons = document.querySelectorAll('.btn-primary[data-bs-target="#editPageModal"]');
+      const editButtons = document.querySelectorAll('.btn-primary[data-bs-target="#editFileModal"]');
       editButtons.forEach(button => {
         button.addEventListener('click', function() {
           const row = this.closest('tr');
-          const name = row.cells[1].textContent;
-          const url = row.cells[2].textContent;
-          const status = row.cells[4].textContent.trim();
-          // Note: Content is not visible in the table, so we're using a placeholder
-          const content = "Placeholder content - replace with actual content retrieval logic";
+          const fileName = row.cells[1].textContent;
           
-          populateEditModal(null, name, url, content, status);
+          populateEditModal(null, fileName);
         });
       });
     });
