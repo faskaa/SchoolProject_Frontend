@@ -346,8 +346,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Xəbərlər və Elanlar Siyahısı</h5>
-                            <p>Aşağıdakı cədvəldə mövcud xəbərlər və elanlar göstərilir. Yeni əlavə etmək, mövcud
-                                olanları redaktə etmək və ya silmək üçün müvafiq düymələrdən istifadə edin.</p>
+                            
 
                             <!-- Table with stripped rows -->
                             <table class="table datatable">
@@ -471,8 +470,50 @@
 
     <!-- Edit News Modal -->
     <div class="modal fade" id="editNewsModal" tabindex="-1">
-        <!-- Similar structure to Add News Modal, but with pre-filled data -->
-    </div><!-- End Edit News Modal-->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Xəbər/Elan Redaktə Et</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="editTitle" class="form-label">Başlıq</label>
+                            <input type="text" class="form-control" id="editTitle" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="editType" class="form-label">Növ</label>
+                            <select id="editType" class="form-select" required>
+                                <option>Xəbər</option>
+                                <option>Elan</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="editContent" class="form-label">Məzmun</label>
+                            <textarea class="form-control" id="editContent" style="height: 100px" required></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="editDate" class="form-label">Tarix</label>
+                            <input type="date" class="form-control" id="editDate" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="editStatus" class="form-label">Status</label>
+                            <select id="editStatus" class="form-select" required>
+                                <option>Aktiv</option>
+                                <option>Gözləmədə</option>
+                                <option>Deaktiv</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
+                    <button type="button" class="btn btn-primary">Yadda Saxla</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Edit News Modal -->
 
     <!-- Delete Confirmation Modal -->
     <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
@@ -511,8 +552,34 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // DataTable initialization
             new simpleDatatables.DataTable(".datatable", {
                 // Your other options here
+            });
+
+            // Function to populate edit modal
+            function populateEditModal(id, title, type, content, date, status) {
+                document.getElementById('editTitle').value = title;
+                document.getElementById('editType').value = type;
+                document.getElementById('editContent').value = content;
+                document.getElementById('editDate').value = date;
+                document.getElementById('editStatus').value = status;
+            }
+
+            // Add click event listeners to edit buttons
+            const editButtons = document.querySelectorAll('.btn-primary[data-bs-target="#editNewsModal"]');
+            editButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const title = row.cells[1].textContent;
+                    const type = row.cells[2].textContent;
+                    const date = row.cells[3].textContent;
+                    const status = row.cells[4].textContent.trim();
+                    // Note: Content is not visible in the table, so we're using a placeholder
+                    const content = "Placeholder content - replace with actual content retrieval logic";
+                    
+                    populateEditModal(null, title, type, content, date, status);
+                });
             });
         });
     </script>
