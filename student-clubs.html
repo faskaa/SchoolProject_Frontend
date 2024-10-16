@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>Xəbərlər və Elanlar - Məktəb İdarəetmə Paneli</title>
+<meta content="Məktəb xəbərləri və elanlarının idarə edilməsi" name="description">
+<meta content="məktəb, xəbərlər, elanlar, idarəetmə" name="keywords">
+
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.gstatic.com" rel="preconnect">
+<link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+  rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+<link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="Məktəb Adı" class="img-fluid">
+        <span class="d-none d-lg-block">Məktəb Adı</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Axtar" title="Axtarış üçün açar söz daxil edin">
+        <button type="submit" title="Axtar"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              4 yeni bildiriş var
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Hamısına bax</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Yeni müraciət</h4>
+                <p>Yeni tələbə qəbul müraciəti daxil olub</p>
+                <p>30 dəq. əvvəl</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Sistem xətası</h4>
+                <p>Verilənlər bazası bağlantısında problem var</p>
+                <p>1 saat əvvəl</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Yeni məzmun</h4>
+                <p>Yeni xəbər məqaləsi əlavə edildi</p>
+                <p>2 saat əvvəl</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Bütün bildirişlərə bax</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">A. Məmmədov</span>
+          </a><!-- End Profile Image Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Anar Məmmədov</h6>
+              <span>Administrator</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Profilim</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Hesab Parametrləri</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Kömək</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Çıxış</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="index.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#content-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-file-earmark-text"></i><span>Məzmun İdarəetməsi</span><i
+                    class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="content-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="content-news.html">
+                        <i class="bi bi-circle"></i><span>Xəbərlər və Elanlar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="content-pages.html">
+                        <i class="bi bi-circle"></i><span>Statik Səhifələr</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="content-gallery.html">
+                        <i class="bi bi-circle"></i><span>Qalereya</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="content-files.html">
+                        <i class="bi bi-circle"></i><span>Fayl İdarəetməsi</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Content Management Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-book"></i><span>Tədris Proqramı</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="education-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="education-programs.html">
+                        <i class="bi bi-circle"></i><span>Təhsil Proqramları</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education-teachers.html">
+                        <i class="bi bi-circle"></i><span>Müəllim Məlumatları</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education-schedule.html">
+                        <i class="bi bi-circle"></i><span>Dərs Cədvəlləri</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Education Program Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#student-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-people"></i><span>Tələbə Həyatı</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="student-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="student-activities.html">
+                        <i class="bi bi-circle"></i><span>Dərsdənkənar Fəaliyyətlər</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="student-clubs.html"  class="active"    >
+                        <i class="bi bi-circle"></i><span>Tələbə Klubları</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="student-sports.html">
+                        <i class="bi bi-circle"></i><span>İdman Tədbirləri</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Student Life Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#admission-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-person-plus"></i><span>Qəbul Prosesi</span><i
+                    class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="admission-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="admission-form.html">
+                        <i class="bi bi-circle"></i><span>Müraciət Forması</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admission-applications.html">
+                        <i class="bi bi-circle"></i><span>Müraciətlər</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admission-statistics.html">
+                        <i class="bi bi-circle"></i><span>Qəbul Statistikaları</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Admission Process Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="contact-management.html">
+                <i class="bi bi-envelope"></i>
+                <span>Əlaqə və Sorğu İdarəetməsi</span>
+            </a>
+        </li><!-- End Contact Management Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="seo-analytics.html">
+                <i class="bi bi-graph-up"></i>
+                <span>SEO və Analitika</span>
+            </a>
+        </li><!-- End SEO and Analytics Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="system-settings.html">
+                <i class="bi bi-gear"></i>
+                <span>Sistem Parametrləri</span>
+            </a>
+        </li><!-- End System Settings Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="reports-audit.html">
+                <i class="bi bi-file-earmark-text"></i>
+                <span>Hesabat və Audit</span>
+            </a>
+        </li><!-- End Reports and Audit Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Tələbə Klubları</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Ana Səhifə</a></li>
+          <li class="breadcrumb-item">Tələbə Həyatı</li>
+          <li class="breadcrumb-item active">Tələbə Klubları</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Klubların Siyahısı</h5>
+              
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Klub Adı</th>
+                    <th scope="col">Üzv sayı</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Sağlam Həyat Klubu</td>
+                    <td>20</td>
+                    <td><span class="badge bg-success">Aktiv</span></td>
+                    <td>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editPageModal"><i class="bi bi-pencil"></i></button>
+                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Bioloqlar Klubu</td>
+                    <td>7</td>
+                    <td><span class="badge bg-success">Aktiv</span></td>
+                    <td>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editPageModal"><i class="bi bi-pencil"></i></button>
+                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
+
+              <div class="text-center mt-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPageModal"><i class="bi bi-plus-circle me-1"></i> Yeni Əlavə Et</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Məktəb İdarəetmə Sistemi</span></strong>. Bütün hüquqlar qorunur
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Add Page Modal -->
+  <div class="modal fade" id="addPageModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Yeni Klub Əlavə Et</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputPageName" class="form-label">Klub Adı</label>
+              <input type="text" class="form-control" id="inputPageName" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPageName" class="form-label">Üzv sayı</label>
+                <input type="number" class="form-control" id="inputPageName" required>
+              </div>
+            <div class="col-md-6">
+              <label for="inputPageStatus" class="form-label">Status</label>
+              <select id="inputPageStatus" class="form-select" required>
+                <option selected disabled value="">Seçin...</option>
+                <option>Aktiv</option>
+                <option>Gözləmədə</option>
+                <option>Deaktiv</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
+          <button type="button" class="btn btn-primary">Əlavə Et</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Add Page Modal-->
+
+  <!-- Edit Page Modal -->
+  <div class="modal fade" id="editPageModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Klubları Redaktə Et</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputPageName" class="form-label">Klub Adı</label>
+                <input type="text" class="form-control" id="inputPageName" required>
+              </div>
+              <div class="col-md-6">
+                  <label for="inputPageName" class="form-label">Üzv sayı</label>
+                  <input type="number" class="form-control" id="inputPageName" required>
+                </div>
+              <div class="col-md-6">
+                <label for="inputPageStatus" class="form-label">Status</label>
+                <select id="inputPageStatus" class="form-select" required>
+                  <option selected disabled value="">Seçin...</option>
+                  <option>Aktiv</option>
+                  <option>Gözləmədə</option>
+                  <option>Deaktiv</option>
+                </select>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
+          <button type="button" class="btn btn-primary">Yadda Saxla</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Edit Page Modal -->
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Silməyi Təsdiqləyin</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bu klubu silmək istədiyinizə əminsiniz?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ləğv Et</button>
+          <button type="button" class="btn btn-danger">Sil</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Delete Confirmation Modal-->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Azerbaijani language for Simple DataTables -->
+  <script src="assets/js/simple-datatables-az.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // DataTable initialization
+      new simpleDatatables.DataTable(".datatable", {
+        // Your options here
+      });
+
+      // Function to populate edit modal
+      function populateEditModal(id, name, url, content, status) {
+        document.getElementById('editPageName').value = name;
+        document.getElementById('editPageURL').value = url;
+        document.getElementById('editPageContent').value = content;
+        document.getElementById('editPageStatus').value = status;
+      }
+
+      // Add click event listeners to edit buttons
+      const editButtons = document.querySelectorAll('.btn-primary[data-bs-target="#editPageModal"]');
+      editButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const row = this.closest('tr');
+          const name = row.cells[1].textContent;
+          const url = row.cells[2].textContent;
+          const status = row.cells[4].textContent.trim();
+          // Note: Content is not visible in the table, so we're using a placeholder
+          const content = "Placeholder content - replace with actual content retrieval logic";
+          
+          populateEditModal(null, name, url, content, status);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
