@@ -2,568 +2,492 @@
 <html lang="az">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Xəbərlər və Elanlar - Məktəb İdarəetmə Paneli</title>
-    <meta content="Məktəb xəbərləri və elanlarının idarə edilməsi" name="description">
-    <meta content="məktəb, xəbərlər, elanlar, idarəetmə" name="keywords">
+  <title>Müraciət Forması - Məktəb İdarəetmə Paneli</title>
+  <meta content="Məktəb İdarəetmə Sistemi - Müraciət Forması" name="description">
+  <meta content="məktəb, idarəetmə, müraciət, forma" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
 
-        <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/logo.png" alt="Məktəb Adı" class="img-fluid">
-                <span class="d-none d-lg-block">Məktəb Adı</span>
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="Məktəb Adı" class="img-fluid">
+        <span class="d-none d-lg-block">Məktəb Adı</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Axtar" title="Axtarış üçün açar söz daxil edin">
+        <button type="submit" title="Axtar"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              4 yeni bildiriş var
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Hamısına bax</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Yeni müraciət</h4>
+                <p>Yeni tələbə qəbul müraciəti daxil olub</p>
+                <p>30 dəq. əvvəl</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Sistem xətası</h4>
+                <p>Verilənlər bazası bağlantısında problem var</p>
+                <p>1 saat əvvəl</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Yeni məzmun</h4>
+                <p>Yeni xəbər məqaləsi əlavə edildi</p>
+                <p>2 saat əvvəl</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Bütün bildirişlərə bax</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">A. Məmmədov</span>
+          </a><!-- End Profile Image Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Anar Məmmədov</h6>
+              <span>Administrator</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Profilim</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Hesab Parametrləri</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Kömək</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Çıxış</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+  
+    <ul class="sidebar-nav" id="sidebar-nav">
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#content-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-file-earmark-text"></i><span>Məzmun İdarəetməsi</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="content-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="content-news.html">
+              <i class="bi bi-circle"></i><span>Xəbərlər və Elanlar</span>
             </a>
-            <i class="bi bi-list toggle-sidebar-btn"></i>
-        </div><!-- End Logo -->
-
-        <div class="search-bar">
-            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Axtar" title="Axtarış üçün açar söz daxil edin">
-                <button type="submit" title="Axtar"><i class="bi bi-search"></i></button>
-            </form>
-        </div><!-- End Search Bar -->
-
-        <nav class="header-nav ms-auto">
-            <ul class="d-flex align-items-center">
-
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link nav-icon search-bar-toggle " href="#">
-                        <i class="bi bi-search"></i>
-                    </a>
-                </li><!-- End Search Icon-->
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                        <i class="bi bi-bell"></i>
-                        <span class="badge bg-primary badge-number">4</span>
-                    </a><!-- End Notification Icon -->
-
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-                        <li class="dropdown-header">
-                            4 yeni bildiriş var
-                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Hamısına bax</span></a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="notification-item">
-                            <i class="bi bi-exclamation-circle text-warning"></i>
-                            <div>
-                                <h4>Yeni müraciət</h4>
-                                <p>Yeni tələbə qəbul müraciəti daxil olub</p>
-                                <p>30 dəq. əvvəl</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="notification-item">
-                            <i class="bi bi-x-circle text-danger"></i>
-                            <div>
-                                <h4>Sistem xətası</h4>
-                                <p>Verilənlər bazası bağlantısında problem var</p>
-                                <p>1 saat əvvəl</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="notification-item">
-                            <i class="bi bi-check-circle text-success"></i>
-                            <div>
-                                <h4>Yeni məzmun</h4>
-                                <p>Yeni xəbər məqaləsi əlavə edildi</p>
-                                <p>2 saat əvvəl</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li class="dropdown-footer">
-                            <a href="#">Bütün bildirişlərə bax</a>
-                        </li>
-
-                    </ul><!-- End Notification Dropdown Items -->
-
-                </li><!-- End Notification Nav -->
-
-                <li class="nav-item dropdown pe-3">
-
-                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">A. Məmmədov</span>
-                    </a><!-- End Profile Image Icon -->
-
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                        <li class="dropdown-header">
-                            <h6>Anar Məmmədov</h6>
-                            <span>Administrator</span>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-person"></i>
-                                <span>Profilim</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-gear"></i>
-                                <span>Hesab Parametrləri</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                                <i class="bi bi-question-circle"></i>
-                                <span>Kömək</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Çıxış</span>
-                            </a>
-                        </li>
-
-                    </ul><!-- End Profile Dropdown Items -->
-                </li><!-- End Profile Nav -->
-
-            </ul>
-        </nav><!-- End Icons Navigation -->
-
-    </header><!-- End Header -->
-
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
-
-        <ul class="sidebar-nav" id="sidebar-nav">
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="index.html">
-                    <i class="bi bi-grid"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li><!-- End Dashboard Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link" data-bs-target="#content-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-file-earmark-text"></i><span>Məzmun İdarəetməsi</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="content-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="content-news.html" >
-                            <i class="bi bi-circle"></i><span>Xəbərlər və Elanlar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="content-pages.html">
-                            <i class="bi bi-circle"></i><span>Statik Səhifələr</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="content-gallery.html">
-                            <i class="bi bi-circle"></i><span>Qalereya</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="content-files.html">
-                            <i class="bi bi-circle"></i><span>Fayl İdarəetməsi</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Content Management Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-book"></i><span>Tədris Proqramı</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="education-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="education-programs.html">
-                            <i class="bi bi-circle"></i><span>Təhsil Proqramları</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="education-teachers.html">
-                            <i class="bi bi-circle"></i><span>Müəllim Məlumatları</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="education-schedule.html">
-                            <i class="bi bi-circle"></i><span>Dərs Cədvəlləri</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Education Program Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#student-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-people"></i><span>Tələbə Həyatı</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="student-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="student-activities.html">
-                            <i class="bi bi-circle"></i><span>Dərsdənkənar Fəaliyyətlər</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="student-clubs.html">
-                            <i class="bi bi-circle"></i><span>Tələbə Klubları</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="student-sports.html">
-                            <i class="bi bi-circle"></i><span>İdman Tədbirləri</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Student Life Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#admission-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-person-plus"></i><span>Qəbul Prosesi</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="admission-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="admission-form.html" class="active">
-                            <i class="bi bi-circle"></i><span>Müraciət Forması</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admission-applications.html">
-                            <i class="bi bi-circle"></i><span>Müraciətlər</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admission-statistics.html">
-                            <i class="bi bi-circle"></i><span>Qəbul Statistikaları</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Admission Process Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="contact-management.html">
-                    <i class="bi bi-envelope"></i>
-                    <span>Əlaqə və Sorğu İdarəetməsi</span>
-                </a>
-            </li><!-- End Contact Management Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="seo-analytics.html">
-                    <i class="bi bi-graph-up"></i>
-                    <span>SEO və Analitika</span>
-                </a>
-            </li><!-- End SEO and Analytics Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="system-settings.html">
-                    <i class="bi bi-gear"></i>
-                    <span>Sistem Parametrləri</span>
-                </a>
-            </li><!-- End System Settings Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="reports-audit.html">
-                    <i class="bi bi-file-earmark-text"></i>
-                    <span>Hesabat və Audit</span>
-                </a>
-            </li><!-- End Reports and Audit Nav -->
-
+          </li>
+          <li>
+            <a href="content-pages.html">
+              <i class="bi bi-circle"></i><span>Statik Səhifələr</span>
+            </a>
+          </li>
+          <li>
+            <a href="content-gallery.html">
+              <i class="bi bi-circle"></i><span>Qalereya</span>
+            </a>
+          </li>
+          <li>
+            <a href="content-files.html">
+              <i class="bi bi-circle"></i><span>Fayl İdarəetməsi</span>
+            </a>
+          </li>
         </ul>
+      </li><!-- End Content Management Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-book"></i><span>Tədris Proqramı</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="education-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="education-programs.html">
+              <i class="bi bi-circle"></i><span>Təhsil Proqramları</span>
+            </a>
+          </li>
+          <li>
+            <a href="education-teachers.html">
+              <i class="bi bi-circle"></i><span>Müəllim Məlumatları</span>
+            </a>
+          </li>
+          <li>
+            <a href="education-schedule.html">
+              <i class="bi bi-circle"></i><span>Dərs Cədvəlləri</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Education Program Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#student-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-people"></i><span>Tələbə Həyatı</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="student-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="student-activities.html">
+              <i class="bi bi-circle"></i><span>Dərsdənkənar Fəaliyyətlər</span>
+            </a>
+          </li>
+          <li>
+            <a href="student-clubs.html">
+              <i class="bi bi-circle"></i><span>Tələbə Klubları</span>
+            </a>
+          </li>
+          <li>
+            <a href="student-sports.html">
+              <i class="bi bi-circle"></i><span>İdman Tədbirləri</span>
+            </a>
+          </li>
+          <li>
+            <a href="student-students.html">
+              <i class="bi bi-circle"></i><span>Tələbə Məlumatları</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Student Life Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link" data-bs-target="#admission-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-plus"></i><span>Qəbul Prosesi</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="admission-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="admission-form.html" class="active">
+              <i class="bi bi-circle"></i><span>Müraciət Forması</span>
+            </a>
+          </li>
+          <li>
+            <a href="admission-applications.html">
+              <i class="bi bi-circle"></i><span>Müraciətlər</span>
+            </a>
+          </li>
+          <li>
+            <a href="admission-statistics.html">
+              <i class="bi bi-circle"></i><span>Qəbul Statistikaları</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Admission Process Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="contact-management.html">
+          <i class="bi bi-envelope"></i>
+          <span>Əlaqə və Sorğu İdarəetməsi</span>
+        </a>
+      </li><!-- End Contact Management Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="seo-analytics.html">
+          <i class="bi bi-graph-up"></i>
+          <span>SEO və Analitika</span>
+        </a>
+      </li><!-- End SEO and Analytics Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="system-settings.html">
+          <i class="bi bi-gear"></i>
+          <span>Sistem Parametrləri</span>
+        </a>
+      </li><!-- End System Settings Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="reports-audit.html">
+          <i class="bi bi-file-earmark-text"></i>
+          <span>Hesabat və Audit</span>
+        </a>
+      </li><!-- End Reports and Audit Nav -->
+  
+    </ul>
+  
+  </aside><!-- End Sidebar-->
 
-    </aside><!-- End Sidebar-->
+  <main id="main" class="main">
 
-    <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Müraciət Forması</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Ana Səhifə</a></li>
+          <li class="breadcrumb-item">Qəbul Prosesi</li>
+          <li class="breadcrumb-item active">Müraciət Forması</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
 
-        <div class="pagetitle">
-            <h1>Müraciət Forması</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Ana Səhifə</a></li>
-                    <li class="breadcrumb-item">Qəbul prosesi</li>
-                    <li class="breadcrumb-item active">Müraciət Forması</li>
-                </ol>
-            </nav>
-        </div><!-- End Page Title -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
 
-        <section class="section">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Müraciət Forması Redaktoru</h5>
+
+              <!-- Form Fields Editor -->
+              <form id="formFieldsEditor">
+                <div id="formFields">
+                  <!-- Existing form fields will be displayed here -->
+                </div>
+                <button type="button" class="btn btn-primary mt-3" id="addField">Yeni Sahə Əlavə Et</button>
+                <button type="submit" class="btn btn-success mt-3">Yadda Saxla</button>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Müraciət Forması Nümunəsi</h5>
+
+              <!-- Sample Application Form -->
+              <form>
+                <div class="row mb-3">
+                  <label for="fullName" class="col-sm-2 col-form-label">Ad Soyad</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="fullName" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="email" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="program" class="col-sm-2 col-form-label">Proqram</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" id="program" required>
+                      <option value="">Seçin...</option>
+                      <option value="Kompüter Elmləri">Kompüter Elmləri</option>
+                      <option value="İqtisadiyyat">İqtisadiyyat</option>
+                      <option value="Hüquq">Hüquq</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Müraciət Et</button>
+                  </div>
+                </div>
+              </form>
+              <!-- End Sample Application Form -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Məktəb Adı</span></strong>. Bütün hüquqlar qorunur
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS for dynamic form fields -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const formFields = document.getElementById('formFields');
+      const addFieldBtn = document.getElementById('addField');
+      let fieldCount = 0;
+
+      addFieldBtn.addEventListener('click', function() {
+        fieldCount++;
+        const fieldHtml = `
+          <div class="mb-3 form-field">
+            <h6>Sahə ${fieldCount}</h6>
             <div class="row">
-                <div class="col-lg-12">
-
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Müraciət forması</h5>
-                            
-
-                            <!-- Table with stripped rows -->
-                            <form class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="inputTitle" class="form-label">Ad</label>
-                                    <input type="text" class="form-control" id="inputTitle" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputTitle" class="form-label">Soyad</label>
-                                    <input type="text" class="form-control" id="inputTitle" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputTitle" class="form-label">Yaş</label>
-                                    <input type="number" class="form-control" id="inputTitle" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputType" class="form-label">Növ</label>
-                                    <select id="inputType" class="form-select" required>
-                                        <option selected disabled value="">Seçin...</option>
-                                        <option>İbtidai</option>
-                                        <option>Orta</option>
-                                    </select>
-                                </div>
-
-                            </form>
-                            <!-- Table i sildim -->
-                            <!-- End Table with stripped rows -->
-
-                            <div class="text-center mt-3">
-                                <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#addNewsModal"><i class="bi bi-plus-circle me-1"></i> Təsdiqlə
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
+              <div class="col-md-4">
+                <label for="fieldLabel${fieldCount}" class="form-label">Etiket</label>
+                <input type="text" class="form-control" id="fieldLabel${fieldCount}" required>
+              </div>
+              <div class="col-md-4">
+                <label for="fieldType${fieldCount}" class="form-label">Tip</label>
+                <select class="form-select" id="fieldType${fieldCount}" required>
+                  <option value="text">Mətn</option>
+                  <option value="email">E-poçt</option>
+                  <option value="number">Rəqəm</option>
+                  <option value="date">Tarix</option>
+                  <option value="select">Seçim</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="fieldRequired${fieldCount}" class="form-label">Məcburi</label>
+                <select class="form-select" id="fieldRequired${fieldCount}">
+                  <option value="1">Bəli</option>
+                  <option value="0">Xeyr</option>
+                </select>
+              </div>
             </div>
-        </section>
+            <button type="button" class="btn btn-danger btn-sm mt-2 remove-field">Sil</button>
+          </div>
+        `;
+        formFields.insertAdjacentHTML('beforeend', fieldHtml);
+      });
 
-    </main><!-- End #main -->
+      formFields.addEventListener('click', function(e) {
+        if (e.target.classList.contains('remove-field')) {
+          e.target.closest('.form-field').remove();
+        }
+      });
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>Məktəb İdarəetmə Sistemi</span></strong>. Bütün hüquqlar qorunur
-        </div>
-    </footer><!-- End Footer -->
-
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Add News Modal -->
-    <div class="modal fade" id="addNewsModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Yeni Xəbər/Elan Əlavə Et</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="inputTitle" class="form-label">Başlıq</label>
-                            <input type="text" class="form-control" id="inputTitle" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputType" class="form-label">Növ</label>
-                            <select id="inputType" class="form-select" required>
-                                <option selected disabled value="">Seçin...</option>
-                                <option>Xəbər</option>
-                                <option>Elan</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <label for="inputContent" class="form-label">Məzmun</label>
-                            <textarea class="form-control" id="inputContent" style="height: 100px" required></textarea>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputDate" class="form-label">Tarix</label>
-                            <input type="date" class="form-control" id="inputDate" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputStatus" class="form-label">Status</label>
-                            <select id="inputStatus" class="form-select" required>
-                                <option selected disabled value="">Seçin...</option>
-                                <option>Aktiv</option>
-                                <option>Gözləmədə</option>
-                                <option>Deaktiv</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-                    <button type="button" class="btn btn-primary">Əlavə Et</button>
-                </div>
-            </div>
-        </div>
-    </div><!-- End Add News Modal-->
-
-    <!-- Edit News Modal -->
-    <div class="modal fade" id="editNewsModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Xəbər/Elan Redaktə Et</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="editTitle" class="form-label">Başlıq</label>
-                            <input type="text" class="form-control" id="editTitle" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="editType" class="form-label">Növ</label>
-                            <select id="editType" class="form-select" required>
-                                <option>Xəbər</option>
-                                <option>Elan</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <label for="editContent" class="form-label">Məzmun</label>
-                            <textarea class="form-control" id="editContent" style="height: 100px" required></textarea>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="editDate" class="form-label">Tarix</label>
-                            <input type="date" class="form-control" id="editDate" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="editStatus" class="form-label">Status</label>
-                            <select id="editStatus" class="form-select" required>
-                                <option>Aktiv</option>
-                                <option>Gözləmədə</option>
-                                <option>Deaktiv</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-                    <button type="button" class="btn btn-primary">Yadda Saxla</button>
-                </div>
-            </div>
-        </div>
-    </div><!-- End Edit News Modal -->
-
-    <!-- Delete Confirmation Modal -->
-    <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Silməyi Təsdiqləyin</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Bu xəbəri/elanı silmək istədiyinizə əminsiniz?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ləğv Et</button>
-                    <button type="button" class="btn btn-danger">Sil</button>
-                </div>
-            </div>
-        </div>
-    </div><!-- End Delete Confirmation Modal-->
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="assets/vendor/echarts/echarts.min.js"></script>
-    <script src="assets/vendor/quill/quill.min.js"></script>
-    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Azerbaijani language for Simple DataTables -->
-    <script src="assets/js/simple-datatables-az.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // DataTable initialization
-            new simpleDatatables.DataTable(".datatable", {
-                // Your other options here
-            });
-
-            // Function to populate edit modal
-            function populateEditModal(id, title, type, content, date, status) {
-                document.getElementById('editTitle').value = title;
-                document.getElementById('editType').value = type;
-                document.getElementById('editContent').value = content;
-                document.getElementById('editDate').value = date;
-                document.getElementById('editStatus').value = status;
-            }
-
-            // Add click event listeners to edit buttons
-            const editButtons = document.querySelectorAll('.btn-primary[data-bs-target="#editNewsModal"]');
-            editButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const row = this.closest('tr');
-                    const title = row.cells[1].textContent;
-                    const type = row.cells[2].textContent;
-                    const date = row.cells[3].textContent;
-                    const status = row.cells[4].textContent.trim();
-                    // Note: Content is not visible in the table, so we're using a placeholder
-                    const content = "Placeholder content - replace with actual content retrieval logic";
-                    
-                    populateEditModal(null, title, type, content, date, status);
-                });
-            });
-        });
-    </script>
+      document.getElementById('formFieldsEditor').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Here you would typically send the form data to the server
+        console.log('Form submitted');
+      });
+    });
+  </script>
 
 </body>
 

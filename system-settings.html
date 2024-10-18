@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dərs Cədvəlləri - Məktəb İdarəetmə Paneli</title>
-  <meta content="Məktəb İdarəetmə Sistemi - Dərs Cədvəlləri" name="description">
-  <meta content="məktəb, idarəetmə, dərs cədvəlləri" name="keywords">
+  <title>Sistem Parametrləri - Məktəb İdarəetmə Paneli</title>
+  <meta content="Məktəb İdarəetmə Sistemi - Sistem Parametrləri" name="description">
+  <meta content="məktəb, idarəetmə, sistem, parametrlər" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -215,29 +215,29 @@
           </li>
           <li>
             <a href="content-files.html">
-              <i class="bi bi-circle"></i><span>Fayl İdarəetməsi</span>
+              <i class="bi bi-circle"></i><span>Fayl Meneceri</span>
             </a>
           </li>
         </ul>
       </li><!-- End Content Management Nav -->
 
       <li class="nav-item">
-        <a class="nav-link" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-book"></i><span>Tədris Proqramı</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="education-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+        <ul id="education-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
           <li>
             <a href="education-programs.html">
-              <i class="bi bi-circle"></i><span>Təhsil Proqramları</span>
+              <i class="bi bi-circle"></i><span>Tədris Proqramları</span>
             </a>
           </li>
           <li>
             <a href="education-teachers.html">
-              <i class="bi bi-circle"></i><span>Müəllim Məlumatları</span>
+              <i class="bi bi-circle"></i><span>Müəllimlər</span>
             </a>
           </li>
           <li>
-            <a href="education-schedule.html" class="active">
+            <a href="education-schedule.html">
               <i class="bi bi-circle"></i><span>Dərs Cədvəlləri</span>
             </a>
           </li>
@@ -310,7 +310,7 @@
       </li><!-- End SEO and Analytics Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="system-settings.html">
+        <a class="nav-link" href="system-settings.html">
           <i class="bi bi-gear"></i>
           <span>Sistem Parametrləri</span>
         </a>
@@ -330,12 +330,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dərs Cədvəlləri</h1>
+      <h1>Sistem Parametrləri</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Ana Səhifə</a></li>
-          <li class="breadcrumb-item">Tədris Proqramı</li>
-          <li class="breadcrumb-item active">Dərs Cədvəlləri</li>
+          <li class="breadcrumb-item active">Sistem Parametrləri</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -343,114 +342,72 @@
     <section class="section">
       <div class="row">
         <div class="col-lg-12">
-
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Dərs Cədvəlləri Siyahısı</h5>
+              <h5 class="card-title">Saytın Ümumi Parametrləri</h5>
 
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Sinif</th>
-                    <th scope="col">Gün</th>
-                    <th scope="col">Saat</th>
-                    <th scope="col">Fənn</th>
-                    <th scope="col">Müəllim</th>
-                    <th scope="col">Otaq</th>
-                    <th scope="col">Əməliyyatlar</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>10A</td>
-                    <td>Bazar ertəsi</td>
-                    <td>09:00 - 09:45</td>
-                    <td>Riyaziyyat</td>
-                    <td>Əli Əliyev</td>
-                    <td>205</td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editScheduleModal">Düzəliş Et</button>
-                      <button type="button" class="btn btn-danger btn-sm">Sil</button>
-                    </td>
-                  </tr>
-                  <!-- Add more rows as needed -->
-                </tbody>
-              </table>
-              <!-- End Table with stripped rows -->
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Yeni Dərs Əlavə Et</h5>
-
-              <!-- Add New Schedule Form -->
+              <!-- General Settings Form -->
               <form>
                 <div class="row mb-3">
-                  <label for="className" class="col-sm-2 col-form-label">Sinif</label>
+                  <label for="siteName" class="col-sm-2 col-form-label">Sayt Adı</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="className" required>
+                    <input type="text" class="form-control" id="siteName">
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="dayOfWeek" class="col-sm-2 col-form-label">Gün</label>
+                  <label for="siteLogo" class="col-sm-2 col-form-label">Logo</label>
                   <div class="col-sm-10">
-                    <select class="form-select" id="dayOfWeek" required>
-                      <option value="Bazar ertəsi">Bazar ertəsi</option>
-                      <option value="Çərşənbə axşamı">Çərşənbə axşamı</option>
-                      <option value="Çərşənbə">Çərşənbə</option>
-                      <option value="Cümə axşamı">Cümə axşamı</option>
-                      <option value="Cümə">Cümə</option>
-                    </select>
+                    <input class="form-control" type="file" id="siteLogo">
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="startTime" class="col-sm-2 col-form-label">Başlama Saatı</label>
+                  <label for="contactEmail" class="col-sm-2 col-form-label">Əlaqə E-poçtu</label>
                   <div class="col-sm-10">
-                    <input type="time" class="form-control" id="startTime" required>
+                    <input type="email" class="form-control" id="contactEmail">
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="endTime" class="col-sm-2 col-form-label">Bitmə Saatı</label>
+                  <label for="contactPhone" class="col-sm-2 col-form-label">Əlaqə Telefonu</label>
                   <div class="col-sm-10">
-                    <input type="time" class="form-control" id="endTime" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="subject" class="col-sm-2 col-form-label">Fənn</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="subject" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="teacher" class="col-sm-2 col-form-label">Müəllim</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="teacher" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="room" class="col-sm-2 col-form-label">Otaq</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="room" required>
+                    <input type="tel" class="form-control" id="contactPhone">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <div class="col-sm-10 offset-sm-2">
-                    <button type="submit" class="btn btn-primary">Əlavə Et</button>
+                    <button type="submit" class="btn btn-primary">Yadda Saxla</button>
                   </div>
                 </div>
-              </form><!-- End Add New Schedule Form -->
+              </form><!-- End General Settings Form -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Backup və Sistem Bərpası</h5>
+
+              <!-- Backup and Restore Form -->
+              <form>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Backup Yarat</label>
+                  <div class="col-sm-10">
+                    <button type="button" class="btn btn-primary">Backup Yarat</button>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="restoreFile" class="col-sm-2 col-form-label">Sistem Bərpası</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="restoreFile">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-10 offset-sm-2">
+                    <button type="button" class="btn btn-warning">Sistemi Bərpa Et</button>
+                  </div>
+                </div>
+              </form><!-- End Backup and Restore Form -->
 
             </div>
           </div>
@@ -459,61 +416,6 @@
     </section>
 
   </main><!-- End #main -->
-
-  <!-- Edit Schedule Modal -->
-  <div class="modal fade" id="editScheduleModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Dərs Cədvəlini Düzəlt</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Edit Schedule Form -->
-          <form>
-            <div class="mb-3">
-              <label for="editClassName" class="form-label">Sinif</label>
-              <input type="text" class="form-control" id="editClassName" value="10A">
-            </div>
-            <div class="mb-3">
-              <label for="editDayOfWeek" class="form-label">Gün</label>
-              <select class="form-select" id="editDayOfWeek">
-                <option value="Bazar ertəsi" selected>Bazar ertəsi</option>
-                <option value="Çərşənbə axşamı">Çərşənbə axşamı</option>
-                <option value="Çərşənbə">Çərşənbə</option>
-                <option value="Cümə axşamı">Cümə axşamı</option>
-                <option value="Cümə">Cümə</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="editStartTime" class="form-label">Başlama Saatı</label>
-              <input type="time" class="form-control" id="editStartTime" value="09:00">
-            </div>
-            <div class="mb-3">
-              <label for="editEndTime" class="form-label">Bitmə Saatı</label>
-              <input type="time" class="form-control" id="editEndTime" value="09:45">
-            </div>
-            <div class="mb-3">
-              <label for="editSubject" class="form-label">Fənn</label>
-              <input type="text" class="form-control" id="editSubject" value="Riyaziyyat">
-            </div>
-            <div class="mb-3">
-              <label for="editTeacher" class="form-label">Müəllim</label>
-              <input type="text" class="form-control" id="editTeacher" value="Əli Əliyev">
-            </div>
-            <div class="mb-3">
-              <label for="editRoom" class="form-label">Otaq</label>
-              <input type="text" class="form-control" id="editRoom" value="205">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-          <button type="button" class="btn btn-primary">Yadda Saxla</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">

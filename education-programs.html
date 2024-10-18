@@ -2,34 +2,32 @@
 <html lang="az">
 
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>Xəbərlər və Elanlar - Məktəb İdarəetmə Paneli</title>
-<meta content="Məktəb xəbərləri və elanlarının idarə edilməsi" name="description">
-<meta content="məktəb, xəbərlər, elanlar, idarəetmə" name="keywords">
+  <title>Təhsil Proqramları - Məktəb İdarəetmə Paneli</title>
+  <meta content="Məktəb İdarəetmə Sistemi - Təhsil Proqramları" name="description">
+  <meta content="məktəb, idarəetmə, təhsil proqramları" name="keywords">
 
-<!-- Favicons -->
-<link href="assets/img/favicon.png" rel="icon">
-<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- Google Fonts -->
-<link href="https://fonts.gstatic.com" rel="preconnect">
-<link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!-- Vendor CSS Files -->
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-<link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-<link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-<link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-<!-- Template Main CSS File -->
-<link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +37,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="Məktəb Adı">
+        <img src="assets/img/logo.png" alt="Məktəb Adı" class="img-fluid">
         <span class="d-none d-lg-block">Məktəb Adı</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -62,7 +60,6 @@
         </li><!-- End Search Icon-->
 
         <li class="nav-item dropdown">
-
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
@@ -128,7 +125,7 @@
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">A. Məmmədov</span>
-          </a><!-- End Profile Iamge Icon -->
+          </a><!-- End Profile Image Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -267,6 +264,11 @@
               <i class="bi bi-circle"></i><span>İdman Tədbirləri</span>
             </a>
           </li>
+          <li>
+            <a href="student-students.html">
+              <i class="bi bi-circle"></i><span>Tələbə Məlumatları</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Student Life Nav -->
 
@@ -345,14 +347,16 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Təhsil Proqramları Siyahısı</h5>
-              
+
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Səviyyə</th>
+                    <th scope="col">Proqram Adı</th>
+                    <th scope="col">Fakültə</th>
                     <th scope="col">Müddət</th>
+                    <th scope="col">Kredit</th>
                     <th scope="col">Status</th>
                     <th scope="col">Əməliyyatlar</th>
                   </tr>
@@ -360,33 +364,20 @@
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>İbtidai Təhsil</td>
-                    <td>İbtidai</td>
+                    <td>Kompüter Elmləri</td>
+                    <td>Mühəndislik</td>
                     <td>4 il</td>
+                    <td>240</td>
                     <td><span class="badge bg-success">Aktiv</span></td>
                     <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProgramModal"><i class="bi bi-pencil"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProgramModal">Düzəliş Et</button>
+                      <button type="button" class="btn btn-danger btn-sm">Sil</button>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Ümumi Orta Təhsil</td>
-                    <td>Orta</td>
-                    <td>5 il</td>
-                    <td><span class="badge bg-success">Aktiv</span></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProgramModal"><i class="bi bi-pencil"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
+                  <!-- Add more rows as needed -->
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
-
-              <div class="text-center mt-3">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProgramModal"><i class="bi bi-plus-circle me-1"></i> Yeni Proqram Əlavə Et</button>
-              </div>
 
             </div>
           </div>
@@ -395,76 +386,98 @@
       </div>
     </section>
 
-  </main><!-- End #main -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Yeni Təhsil Proqramı Əlavə Et</h5>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>Məktəb İdarəetmə Sistemi</span></strong>. Bütün hüquqlar qorunur
-    </div>
-  </footer><!-- End Footer -->
+              <!-- Add New Education Program Form -->
+              <form>
+                <div class="row mb-3">
+                  <label for="programName" class="col-sm-2 col-form-label">Proqram Adı</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="programName" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="faculty" class="col-sm-2 col-form-label">Fakültə</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="faculty" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="duration" class="col-sm-2 col-form-label">Müddət</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="duration" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="credits" class="col-sm-2 col-form-label">Kredit</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="credits" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="programStatus" class="col-sm-2 col-form-label">Status</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" id="programStatus" required>
+                      <option value="active">Aktiv</option>
+                      <option value="inactive">Qeyri-aktiv</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Əlavə Et</button>
+                  </div>
+                </div>
+              </form><!-- End Add New Education Program Form -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Add Program Modal -->
-  <div class="modal fade" id="addProgramModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Yeni Təhsil Proqramı Əlavə Et</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form class="row g-3">
-            <div class="col-12">
-              <label for="inputProgramName" class="form-label">Proqram Adı</label>
-              <input type="text" class="form-control" id="inputProgramName" required>
             </div>
-            <div class="col-md-6">
-              <label for="inputLevel" class="form-label">Səviyyə</label>
-              <select id="inputLevel" class="form-select" required>
-                <option selected disabled value="">Seçin...</option>
-                <option>İbtidai</option>
-                <option>Orta</option>
-                <option>Tam Orta</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="inputDuration" class="form-label">Müddət</label>
-              <input type="text" class="form-control" id="inputDuration" required>
-            </div>
-            <div class="col-12">
-              <label for="inputDescription" class="form-label">Təsvir</label>
-              <textarea class="form-control" id="inputDescription" rows="3" required></textarea>
-            </div>
-            <div class="col-md-6">
-              <label for="inputStatus" class="form-label">Status</label>
-              <select id="inputStatus" class="form-select" required>
-                <option selected disabled value="">Seçin...</option>
-                <option>Aktiv</option>
-                <option>Deaktiv</option>
-              </select>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-          <button type="button" class="btn btn-primary">Əlavə Et</button>
+          </div>
         </div>
       </div>
-    </div>
-  </div><!-- End Add Program Modal-->
+    </section>
+
+  </main><!-- End #main -->
 
   <!-- Edit Program Modal -->
   <div class="modal fade" id="editProgramModal" tabindex="-1">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Təhsil Proqramını Redaktə Et</h5>
+          <h5 class="modal-title">Təhsil Proqramını Düzəlt</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!-- Add form fields similar to Add Program Modal, but with id prefix 'edit' -->
+          <!-- Edit Program Form -->
+          <form>
+            <div class="mb-3">
+              <label for="editProgramName" class="form-label">Proqram Adı</label>
+              <input type="text" class="form-control" id="editProgramName" value="Kompüter Elmləri">
+            </div>
+            <div class="mb-3">
+              <label for="editFaculty" class="form-label">Fakültə</label>
+              <input type="text" class="form-control" id="editFaculty" value="Mühəndislik">
+            </div>
+            <div class="mb-3">
+              <label for="editDuration" class="form-label">Müddət</label>
+              <input type="text" class="form-control" id="editDuration" value="4 il">
+            </div>
+            <div class="mb-3">
+              <label for="editCredits" class="form-label">Kredit</label>
+              <input type="number" class="form-control" id="editCredits" value="240">
+            </div>
+            <div class="mb-3">
+              <label for="editProgramStatus" class="form-label">Status</label>
+              <select class="form-select" id="editProgramStatus">
+                <option value="active" selected>Aktiv</option>
+                <option value="inactive">Qeyri-aktiv</option>
+              </select>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
@@ -472,26 +485,16 @@
         </div>
       </div>
     </div>
-  </div><!-- End Edit Program Modal -->
+  </div>
 
-  <!-- Delete Confirmation Modal -->
-  <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Silməyi Təsdiqləyin</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Bu təhsil proqramını silmək istədiyinizə əminsiniz?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ləğv Et</button>
-          <button type="button" class="btn btn-danger">Sil</button>
-        </div>
-      </div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Məktəb Adı</span></strong>. Bütün hüquqlar qorunur
     </div>
-  </div><!-- End Delete Confirmation Modal-->
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -505,34 +508,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // DataTable initialization
-      new simpleDatatables.DataTable(".datatable", {
-        // Your options here
-      });
-
-      // Function to populate edit modal
-      function populateEditModal(id, name, level, duration, description, status) {
-        // Populate the edit form fields
-      }
-
-      // Add click event listeners to edit buttons
-      const editButtons = document.querySelectorAll('.btn-primary[data-bs-target="#editProgramModal"]');
-      editButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const row = this.closest('tr');
-          const name = row.cells[1].textContent;
-          const level = row.cells[2].textContent;
-          const duration = row.cells[3].textContent;
-          const status = row.cells[4].textContent.trim();
-          
-          populateEditModal(null, name, level, duration, "Description placeholder", status);
-        });
-      });
-    });
-  </script>
 
 </body>
 

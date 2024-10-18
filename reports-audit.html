@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dərs Cədvəlləri - Məktəb İdarəetmə Paneli</title>
-  <meta content="Məktəb İdarəetmə Sistemi - Dərs Cədvəlləri" name="description">
-  <meta content="məktəb, idarəetmə, dərs cədvəlləri" name="keywords">
+  <title>Hesabat və Audit - Məktəb İdarəetmə Paneli</title>
+  <meta content="Məktəb İdarəetmə Sistemi - Hesabat və Audit" name="description">
+  <meta content="məktəb, idarəetmə, hesabat, audit" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -222,10 +222,10 @@
       </li><!-- End Content Management Nav -->
 
       <li class="nav-item">
-        <a class="nav-link" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#education-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-book"></i><span>Tədris Proqramı</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="education-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+        <ul id="education-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
           <li>
             <a href="education-programs.html">
               <i class="bi bi-circle"></i><span>Təhsil Proqramları</span>
@@ -237,7 +237,7 @@
             </a>
           </li>
           <li>
-            <a href="education-schedule.html" class="active">
+            <a href="education-schedule.html">
               <i class="bi bi-circle"></i><span>Dərs Cədvəlləri</span>
             </a>
           </li>
@@ -317,7 +317,7 @@
       </li><!-- End System Settings Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="reports-audit.html">
+        <a class="nav-link" href="reports-audit.html">
           <i class="bi bi-file-earmark-text"></i>
           <span>Hesabat və Audit</span>
         </a>
@@ -330,128 +330,127 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dərs Cədvəlləri</h1>
+      <h1>Hesabat və Audit</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Ana Səhifə</a></li>
-          <li class="breadcrumb-item">Tədris Proqramı</li>
-          <li class="breadcrumb-item active">Dərs Cədvəlləri</li>
+          <li class="breadcrumb-item active">Hesabat və Audit</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
+    <section class="section dashboard">
       <div class="row">
-        <div class="col-lg-12">
-
-          <div class="card">
+        <!-- Admin Fəaliyyətləri Jurnalı -->
+        <div class="col-12">
+          <div class="card recent-sales overflow-auto">
             <div class="card-body">
-              <h5 class="card-title">Dərs Cədvəlləri Siyahısı</h5>
-
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
+              <h5 class="card-title">Admin Fəaliyyətləri Jurnalı</h5>
+              <table class="table table-borderless datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Sinif</th>
-                    <th scope="col">Gün</th>
-                    <th scope="col">Saat</th>
-                    <th scope="col">Fənn</th>
-                    <th scope="col">Müəllim</th>
-                    <th scope="col">Otaq</th>
-                    <th scope="col">Əməliyyatlar</th>
+                    <th scope="col">Tarix</th>
+                    <th scope="col">İstifadəçi</th>
+                    <th scope="col">Fəaliyyət</th>
+                    <th scope="col">Detallar</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>10A</td>
-                    <td>Bazar ertəsi</td>
-                    <td>09:00 - 09:45</td>
-                    <td>Riyaziyyat</td>
-                    <td>Əli Əliyev</td>
-                    <td>205</td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editScheduleModal">Düzəliş Et</button>
-                      <button type="button" class="btn btn-danger btn-sm">Sil</button>
-                    </td>
+                    <td>2023-05-15 14:30</td>
+                    <td>admin@example.com</td>
+                    <td>Yeni xəbər əlavə edildi</td>
+                    <td><a href="#" class="text-primary">Ətraflı</a></td>
+                  </tr>
+                  <tr>
+                    <td>2023-05-14 10:15</td>
+                    <td>editor@example.com</td>
+                    <td>Tələbə məlumatları yeniləndi</td>
+                    <td><a href="#" class="text-primary">Ətraflı</a></td>
                   </tr>
                   <!-- Add more rows as needed -->
                 </tbody>
               </table>
-              <!-- End Table with stripped rows -->
-
             </div>
           </div>
-
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
+        <!-- Məzmun Dəyişikliklərinin Tarixçəsi -->
+        <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Yeni Dərs Əlavə Et</h5>
+              <h5 class="card-title">Məzmun Dəyişikliklərinin Tarixçəsi</h5>
+              <table class="table table-borderless datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">Tarix</th>
+                    <th scope="col">İstifadəçi</th>
+                    <th scope="col">Səhifə/Bölmə</th>
+                    <th scope="col">Dəyişiklik</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2023-05-15 15:45</td>
+                    <td>content_manager@example.com</td>
+                    <td>Haqqımızda səhifəsi</td>
+                    <td>Mətn yeniləndi</td>
+                  </tr>
+                  <tr>
+                    <td>2023-05-14 11:30</td>
+                    <td>admin@example.com</td>
+                    <td>Əsas səhifə</td>
+                    <td>Yeni slider əlavə edildi</td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-              <!-- Add New Schedule Form -->
-              <form>
-                <div class="row mb-3">
-                  <label for="className" class="col-sm-2 col-form-label">Sinif</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="className" required>
+        <!-- Sistem Performansı və Ziyarətçi Statistikaları -->
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sistem Performansı və Ziyarətçi Statistikaları</h5>
+              <div class="row">
+                <div class="col-xxl-4 col-md-6">
+                  <div class="card info-card sales-card">
+                    <div class="card-body">
+                      <h5 class="card-title">Ümumi Ziyarətçi Sayı</h5>
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                          <i class="bi bi-people"></i>
+                        </div>
+                        <div class="ps-3">
+                          <h6>14,568</h6>
+                          <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">artım</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="row mb-3">
-                  <label for="dayOfWeek" class="col-sm-2 col-form-label">Gün</label>
-                  <div class="col-sm-10">
-                    <select class="form-select" id="dayOfWeek" required>
-                      <option value="Bazar ertəsi">Bazar ertəsi</option>
-                      <option value="Çərşənbə axşamı">Çərşənbə axşamı</option>
-                      <option value="Çərşənbə">Çərşənbə</option>
-                      <option value="Cümə axşamı">Cümə axşamı</option>
-                      <option value="Cümə">Cümə</option>
-                    </select>
+                <div class="col-xxl-4 col-md-6">
+                  <div class="card info-card revenue-card">
+                    <div class="card-body">
+                      <h5 class="card-title">Ortalama Səhifə Yüklənmə Vaxtı</h5>
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                          <i class="bi bi-alarm"></i>
+                        </div>
+                        <div class="ps-3">
+                          <h6>2.5 saniyə</h6>
+                          <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">yaxşılaşma</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="row mb-3">
-                  <label for="startTime" class="col-sm-2 col-form-label">Başlama Saatı</label>
-                  <div class="col-sm-10">
-                    <input type="time" class="form-control" id="startTime" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="endTime" class="col-sm-2 col-form-label">Bitmə Saatı</label>
-                  <div class="col-sm-10">
-                    <input type="time" class="form-control" id="endTime" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="subject" class="col-sm-2 col-form-label">Fənn</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="subject" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="teacher" class="col-sm-2 col-form-label">Müəllim</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="teacher" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="room" class="col-sm-2 col-form-label">Otaq</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="room" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-sm-10 offset-sm-2">
-                    <button type="submit" class="btn btn-primary">Əlavə Et</button>
-                  </div>
-                </div>
-              </form><!-- End Add New Schedule Form -->
-
+                <!-- Add more performance and visitor statistics cards as needed -->
+              </div>
+              <!-- Add charts for system performance and visitor statistics -->
+              <div id="performanceChart" style="min-height: 400px;" class="echart"></div>
             </div>
           </div>
         </div>
@@ -459,61 +458,6 @@
     </section>
 
   </main><!-- End #main -->
-
-  <!-- Edit Schedule Modal -->
-  <div class="modal fade" id="editScheduleModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Dərs Cədvəlini Düzəlt</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Edit Schedule Form -->
-          <form>
-            <div class="mb-3">
-              <label for="editClassName" class="form-label">Sinif</label>
-              <input type="text" class="form-control" id="editClassName" value="10A">
-            </div>
-            <div class="mb-3">
-              <label for="editDayOfWeek" class="form-label">Gün</label>
-              <select class="form-select" id="editDayOfWeek">
-                <option value="Bazar ertəsi" selected>Bazar ertəsi</option>
-                <option value="Çərşənbə axşamı">Çərşənbə axşamı</option>
-                <option value="Çərşənbə">Çərşənbə</option>
-                <option value="Cümə axşamı">Cümə axşamı</option>
-                <option value="Cümə">Cümə</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="editStartTime" class="form-label">Başlama Saatı</label>
-              <input type="time" class="form-control" id="editStartTime" value="09:00">
-            </div>
-            <div class="mb-3">
-              <label for="editEndTime" class="form-label">Bitmə Saatı</label>
-              <input type="time" class="form-control" id="editEndTime" value="09:45">
-            </div>
-            <div class="mb-3">
-              <label for="editSubject" class="form-label">Fənn</label>
-              <input type="text" class="form-control" id="editSubject" value="Riyaziyyat">
-            </div>
-            <div class="mb-3">
-              <label for="editTeacher" class="form-label">Müəllim</label>
-              <input type="text" class="form-control" id="editTeacher" value="Əli Əliyev">
-            </div>
-            <div class="mb-3">
-              <label for="editRoom" class="form-label">Otaq</label>
-              <input type="text" class="form-control" id="editRoom" value="205">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-          <button type="button" class="btn btn-primary">Yadda Saxla</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -536,6 +480,45 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS for charts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      echarts.init(document.querySelector("#performanceChart")).setOption({
+        tooltip: {
+          trigger: 'axis'
+        },
+        legend: {
+          data: ['Ziyarətçi Sayı', 'Səhifə Yüklənmə Vaxtı']
+        },
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+        },
+        xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: ['Bazar', 'B.e', 'Ç.a', 'Çər', 'C.a', 'Cümə', 'Şənbə']
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [{
+            name: 'Ziyarətçi Sayı',
+            type: 'line',
+            data: [120, 132, 101, 134, 90, 230, 210]
+          },
+          {
+            name: 'Səhifə Yüklənmə Vaxtı',
+            type: 'line',
+            data: [2.2, 2.5, 2.3, 2.6, 2.1, 2.4, 2.3]
+          }
+        ]
+      });
+    });
+  </script>
 
 </body>
 

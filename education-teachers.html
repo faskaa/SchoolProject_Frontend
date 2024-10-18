@@ -2,34 +2,32 @@
 <html lang="az">
 
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>Xəbərlər və Elanlar - Məktəb İdarəetmə Paneli</title>
-<meta content="Məktəb xəbərləri və elanlarının idarə edilməsi" name="description">
-<meta content="məktəb, xəbərlər, elanlar, idarəetmə" name="keywords">
+  <title>Müəllim Məlumatları - Məktəb İdarəetmə Paneli</title>
+  <meta content="Məktəb İdarəetmə Sistemi - Müəllim Məlumatları" name="description">
+  <meta content="məktəb, idarəetmə, müəllim məlumatları" name="keywords">
 
-<!-- Favicons -->
-<link href="assets/img/favicon.png" rel="icon">
-<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- Google Fonts -->
-<link href="https://fonts.gstatic.com" rel="preconnect">
-<link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!-- Vendor CSS Files -->
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-<link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-<link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-<link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-<!-- Template Main CSS File -->
-<link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +37,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="Məktəb Adı">
+        <img src="assets/img/logo.png" alt="Məktəb Adı" class="img-fluid">
         <span class="d-none d-lg-block">Məktəb Adı</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -62,7 +60,6 @@
         </li><!-- End Search Icon-->
 
         <li class="nav-item dropdown">
-
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
@@ -128,7 +125,7 @@
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">A. Məmmədov</span>
-          </a><!-- End Profile Iamge Icon -->
+          </a><!-- End Profile Image Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -267,6 +264,11 @@
               <i class="bi bi-circle"></i><span>İdman Tədbirləri</span>
             </a>
           </li>
+          <li>
+            <a href="student-students.html">
+              <i class="bi bi-circle"></i><span>Tələbə Məlumatları</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Student Life Nav -->
 
@@ -345,7 +347,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Müəllim Siyahısı</h5>
-              
+
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
@@ -361,33 +363,19 @@
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Anar</td>
-                    <td>Məmmədov</td>
+                    <td>Əli</td>
+                    <td>Əliyev</td>
                     <td>Riyaziyyat</td>
                     <td><span class="badge bg-success">Aktiv</span></td>
                     <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editTeacherModal"><i class="bi bi-pencil"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editTeacherModal">Düzəliş Et</button>
+                      <button type="button" class="btn btn-danger btn-sm">Sil</button>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Leyla</td>
-                    <td>Əliyeva</td>
-                    <td>Azərbaycan dili</td>
-                    <td><span class="badge bg-success">Aktiv</span></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editTeacherModal"><i class="bi bi-pencil"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
+                  <!-- Add more rows as needed -->
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
-
-              <div class="text-center mt-3">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTeacherModal"><i class="bi bi-plus-circle me-1"></i> Yeni Müəllim Əlavə Et</button>
-              </div>
 
             </div>
           </div>
@@ -396,112 +384,96 @@
       </div>
     </section>
 
-  </main><!-- End #main -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Yeni Müəllim Əlavə Et</h5>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>Məktəb İdarəetmə Sistemi</span></strong>. Bütün hüquqlar qorunur
-    </div>
-  </footer><!-- End Footer -->
+              <!-- Add New Teacher Form -->
+              <form>
+                <div class="row mb-3">
+                  <label for="firstName" class="col-sm-2 col-form-label">Ad</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="firstName" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="lastName" class="col-sm-2 col-form-label">Soyad</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="lastName" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="subject" class="col-sm-2 col-form-label">Fənn</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="subject" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="bio" class="col-sm-2 col-form-label">Haqqında</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="bio" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="status" class="col-sm-2 col-form-label">Status</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" id="status" required>
+                      <option value="active">Aktiv</option>
+                      <option value="inactive">Qeyri-aktiv</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Əlavə Et</button>
+                  </div>
+                </div>
+              </form><!-- End Add New Teacher Form -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Add Teacher Modal -->
-  <div class="modal fade" id="addTeacherModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Yeni Müəllim Əlavə Et</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputFirstName" class="form-label">Ad</label>
-              <input type="text" class="form-control" id="inputFirstName" required>
             </div>
-            <div class="col-md-6">
-              <label for="inputLastName" class="form-label">Soyad</label>
-              <input type="text" class="form-control" id="inputLastName" required>
-            </div>
-            <div class="col-md-6">
-              <label for="inputSubject" class="form-label">Fənn</label>
-              <select id="inputSubject" class="form-select" required>
-                <option selected disabled value="">Seçin...</option>
-                <option>Riyaziyyat</option>
-                <option>Azərbaycan dili</option>
-                <option>Tarix</option>
-                <option>Fizika</option>
-                <option>Kimya</option>
-                <option>Biologiya</option>
-                <option>İngilis dili</option>
-                <!-- Add more subjects as needed -->
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="inputStatus" class="form-label">Status</label>
-              <select id="inputStatus" class="form-select" required>
-                <option selected disabled value="">Seçin...</option>
-                <option>Aktiv</option>
-                <option>Deaktiv</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label for="inputBio" class="form-label">Qısa Bio</label>
-              <textarea class="form-control" id="inputBio" rows="3" required></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-          <button type="button" class="btn btn-primary">Əlavə Et</button>
+          </div>
         </div>
       </div>
-    </div>
-  </div><!-- End Add Teacher Modal-->
+    </section>
+
+  </main><!-- End #main -->
 
   <!-- Edit Teacher Modal -->
   <div class="modal fade" id="editTeacherModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Müəllim Məlumatlarını Redaktə Et</h5>
+          <h5 class="modal-title">Müəllim Məlumatlarını Düzəlt</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form class="row g-3">
-            <div class="col-md-6">
+          <!-- Edit Teacher Form -->
+          <form>
+            <div class="mb-3">
               <label for="editFirstName" class="form-label">Ad</label>
-              <input type="text" class="form-control" id="editFirstName" required>
+              <input type="text" class="form-control" id="editFirstName" value="Əli">
             </div>
-            <div class="col-md-6">
+            <div class="mb-3">
               <label for="editLastName" class="form-label">Soyad</label>
-              <input type="text" class="form-control" id="editLastName" required>
+              <input type="text" class="form-control" id="editLastName" value="Əliyev">
             </div>
-            <div class="col-md-6">
+            <div class="mb-3">
               <label for="editSubject" class="form-label">Fənn</label>
-              <select id="editSubject" class="form-select" required>
-                <option>Riyaziyyat</option>
-                <option>Azərbaycan dili</option>
-                <option>Tarix</option>
-                <option>Fizika</option>
-                <option>Kimya</option>
-                <option>Biologiya</option>
-                <option>İngilis dili</option>
-                <!-- Add more subjects as needed -->
-              </select>
+              <input type="text" class="form-control" id="editSubject" value="Riyaziyyat">
             </div>
-            <div class="col-md-6">
+            <div class="mb-3">
+              <label for="editBio" class="form-label">Haqqında</label>
+              <textarea class="form-control" id="editBio" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
               <label for="editStatus" class="form-label">Status</label>
-              <select id="editStatus" class="form-select" required>
-                <option>Aktiv</option>
-                <option>Deaktiv</option>
+              <select class="form-select" id="editStatus">
+                <option value="active" selected>Aktiv</option>
+                <option value="inactive">Qeyri-aktiv</option>
               </select>
-            </div>
-            <div class="col-12">
-              <label for="editBio" class="form-label">Qısa Bio</label>
-              <textarea class="form-control" id="editBio" rows="3" required></textarea>
             </div>
           </form>
         </div>
@@ -511,26 +483,16 @@
         </div>
       </div>
     </div>
-  </div><!-- End Edit Teacher Modal -->
+  </div>
 
-  <!-- Delete Confirmation Modal -->
-  <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Silməyi Təsdiqləyin</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Bu müəllim məlumatlarını silmək istədiyinizə əminsiniz?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ləğv Et</button>
-          <button type="button" class="btn btn-danger">Sil</button>
-        </div>
-      </div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Məktəb Adı</span></strong>. Bütün hüquqlar qorunur
     </div>
-  </div><!-- End Delete Confirmation Modal-->
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -544,40 +506,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // DataTable initialization
-      new simpleDatatables.DataTable(".datatable", {
-        // Your options here
-      });
-
-      // Function to populate edit modal
-      function populateEditModal(id, firstName, lastName, subject, bio, status) {
-        document.getElementById('editFirstName').value = firstName;
-        document.getElementById('editLastName').value = lastName;
-        document.getElementById('editSubject').value = subject;
-        document.getElementById('editBio').value = bio;
-        document.getElementById('editStatus').value = status;
-      }
-
-      // Add click event listeners to edit buttons
-      const editButtons = document.querySelectorAll('.btn-primary[data-bs-target="#editTeacherModal"]');
-      editButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const row = this.closest('tr');
-          const firstName = row.cells[1].textContent;
-          const lastName = row.cells[2].textContent;
-          const subject = row.cells[3].textContent;
-          const status = row.cells[4].textContent.trim();
-          // Note: Bio is not visible in the table, so we're using a placeholder
-          const bio = "Müəllim haqqında qısa məlumat burada olacaq. Bu məlumatı serverdən əldə etmək lazımdır.";
-          
-          populateEditModal(null, firstName, lastName, subject, bio, status);
-        });
-      });
-    });
-  </script>
 
 </body>
 

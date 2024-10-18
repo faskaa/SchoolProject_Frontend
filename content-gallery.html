@@ -2,34 +2,32 @@
 <html lang="az">
 
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>Xəbərlər və Elanlar - Məktəb İdarəetmə Paneli</title>
-<meta content="Məktəb xəbərləri və elanlarının idarə edilməsi" name="description">
-<meta content="məktəb, xəbərlər, elanlar, idarəetmə" name="keywords">
+  <title>Qalereya - Məktəb İdarəetmə Paneli</title>
+  <meta content="Məktəb İdarəetmə Sistemi - Qalereya" name="description">
+  <meta content="məktəb, idarəetmə, qalereya" name="keywords">
 
-<!-- Favicons -->
-<link href="assets/img/favicon.png" rel="icon">
-<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- Google Fonts -->
-<link href="https://fonts.gstatic.com" rel="preconnect">
-<link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!-- Vendor CSS Files -->
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-<link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-<link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-<link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-<!-- Template Main CSS File -->
-<link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +37,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="Məktəb Adı">
+        <img src="assets/img/logo.png" alt="Məktəb Adı" class="img-fluid">
         <span class="d-none d-lg-block">Məktəb Adı</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -62,7 +60,6 @@
         </li><!-- End Search Icon-->
 
         <li class="nav-item dropdown">
-
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
@@ -128,7 +125,7 @@
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">A. Məmmədov</span>
-          </a><!-- End Profile Iamge Icon -->
+          </a><!-- End Profile Image Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -267,6 +264,11 @@
               <i class="bi bi-circle"></i><span>İdman Tədbirləri</span>
             </a>
           </li>
+          <li>
+            <a href="student-students.html">
+              <i class="bi bi-circle"></i><span>Tələbə Məlumatları</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Student Life Nav -->
 
@@ -344,49 +346,23 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Qalereya Elementləri</h5>
-             
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Başlıq</th>
-                    <th scope="col">Növ</th>
-                    <th scope="col">Əlavə Edilmə Tarixi</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Əməliyyatlar</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Məktəb Binası</td>
-                    <td>Şəkil</td>
-                    <td>2023-09-15</td>
-                    <td><span class="badge bg-success">Aktiv</span></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editGalleryModal"><i class="bi bi-pencil"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Məzun Günü</td>
-                    <td>Video</td>
-                    <td>2023-08-01</td>
-                    <td><span class="badge bg-success">Aktiv</span></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editGalleryModal"><i class="bi bi-pencil"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"><i class="bi bi-trash"></i></button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- End Table with stripped rows -->
+              <h5 class="card-title">Qalereya Şəkilləri</h5>
 
-              <div class="text-center mt-3">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addGalleryModal"><i class="bi bi-plus-circle me-1"></i> Yeni Element Əlavə Et</button>
+              <!-- Gallery Grid -->
+              <div class="row gallery-grid">
+                <!-- Add gallery items here -->
+                <div class="col-md-4 mb-4">
+                  <div class="gallery-item">
+                    <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="">
+                    <div class="gallery-item-info">
+                      <h6>Şəkil Başlığı</h6>
+                      <p>Şəkil Təsviri</p>
+                      <button class="btn btn-primary btn-sm">Düzəliş Et</button>
+                      <button class="btn btn-danger btn-sm">Sil</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add more gallery items as needed -->
               </div>
 
             </div>
@@ -396,121 +372,56 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Yeni Şəkil Əlavə Et</h5>
+
+              <!-- Add New Image Form -->
+              <form>
+                <div class="row mb-3">
+                  <label for="imageTitle" class="col-sm-2 col-form-label">Şəkil Başlığı</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="imageTitle" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="imageDescription" class="col-sm-2 col-form-label">Şəkil Təsviri</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="imageDescription" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="imageFile" class="col-sm-2 col-form-label">Şəkil Faylı</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="imageFile" accept="image/*" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Əlavə Et</button>
+                  </div>
+                </div>
+              </form><!-- End Add New Image Form -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>Məktəb İdarəetmə Sistemi</span></strong>. Bütün hüquqlar qorunur
+      &copy; Copyright <strong><span>Məktəb Adı</span></strong>. Bütün hüquqlar qorunur
     </div>
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Add Gallery Modal -->
-  <div class="modal fade" id="addGalleryModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Yeni Qalereya Elementi Əlavə Et</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputTitle" class="form-label">Başlıq</label>
-              <input type="text" class="form-control" id="inputTitle" required>
-            </div>
-            <div class="col-md-6">
-              <label for="inputType" class="form-label">Növ</label>
-              <select id="inputType" class="form-select" required>
-                <option selected disabled value="">Seçin...</option>
-                <option>Şəkil</option>
-                <option>Video</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label for="inputFile" class="form-label">Fayl</label>
-              <input type="file" class="form-control" id="inputFile" required>
-            </div>
-            <div class="col-md-6">
-              <label for="inputStatus" class="form-label">Status</label>
-              <select id="inputStatus" class="form-select" required>
-                <option selected disabled value="">Seçin...</option>
-                <option>Aktiv</option>
-                <option>Deaktiv</option>
-              </select>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-          <button type="button" class="btn btn-primary">Əlavə Et</button>
-        </div>
-      </div>
-    </div>
-  </div><!-- End Add Gallery Modal-->
-
-  <!-- Edit Gallery Modal -->
-  <div class="modal fade" id="editGalleryModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Qalereya Elementini Redaktə Et</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="editTitle" class="form-label">Başlıq</label>
-              <input type="text" class="form-control" id="editTitle" required>
-            </div>
-            <div class="col-md-6">
-              <label for="editType" class="form-label">Növ</label>
-              <select id="editType" class="form-select" required>
-                <option>Şəkil</option>
-                <option>Video</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label for="editFile" class="form-label">Fayl</label>
-              <input type="file" class="form-control" id="editFile">
-            </div>
-            <div class="col-md-6">
-              <label for="editStatus" class="form-label">Status</label>
-              <select id="editStatus" class="form-select" required>
-                <option>Aktiv</option>
-                <option>Deaktiv</option>
-              </select>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
-          <button type="button" class="btn btn-primary">Yadda Saxla</button>
-        </div>
-      </div>
-    </div>
-  </div><!-- End Edit Gallery Modal -->
-
-  <!-- Delete Confirmation Modal -->
-  <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Silməyi Təsdiqləyin</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Bu qalereya elementini silmək istədiyinizə əminsiniz?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ləğv Et</button>
-          <button type="button" class="btn btn-danger">Sil</button>
-        </div>
-      </div>
-    </div>
-  </div><!-- End Delete Confirmation Modal-->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -524,35 +435,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // DataTable initialization
-      new simpleDatatables.DataTable(".datatable", {
-        // Your options here
-      });
-
-      // Function to populate edit modal
-      function populateEditModal(id, title, type, status) {
-        document.getElementById('editTitle').value = title;
-        document.getElementById('editType').value = type;
-        document.getElementById('editStatus').value = status;
-      }
-
-      // Add click event listeners to edit buttons
-      const editButtons = document.querySelectorAll('.btn-primary[data-bs-target="#editGalleryModal"]');
-      editButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const row = this.closest('tr');
-          const title = row.cells[1].textContent;
-          const type = row.cells[2].textContent;
-          const status = row.cells[4].textContent.trim();
-          
-          populateEditModal(null, title, type, status);
-        });
-      });
-    });
-  </script>
 
 </body>
 
